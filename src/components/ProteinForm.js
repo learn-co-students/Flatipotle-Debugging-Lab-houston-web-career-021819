@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 
-const ProteinForm = () => {
-  return (
+const ProteinForm = (props) => {
+  
+   return (
     <Fragment>
       <h1><label htmlFor="protein">Protein</label></h1>
       <div className="inline fields ui centered grid">
@@ -13,7 +14,7 @@ const ProteinForm = () => {
               value="Barbacoa"
               name="protein"
               checked={ props.protein.includes('Barbacoa') }
-              onChange={ props.handleChange }
+              onChange={props.handleOnChange }
             />
             <img src={ require('../images/protein/barbacoa.png') } height="100px" width="100px" alt="barbacoa" />
             <label htmlFor="barbacoa">Barbacoa</label>
@@ -28,7 +29,7 @@ const ProteinForm = () => {
               value="Steak"
               name="protein"
               checked={ props.protein.includes('Steak') }
-              onChange={ props.handleChange }
+              onChange={props.handleOnChange }
             />
             <img src={ require('../images/protein/steak.png') } height="100px" width="100px" alt="steak" />
             <label htmlFor="steak">Steak</label>
@@ -42,8 +43,8 @@ const ProteinForm = () => {
               type="checkbox"
               value="Chicken"
               name="protein"
+              onChange={props.handleOnChange }
               checked={ props.protein.includes('Chicken') }
-              onChange={ props.handleChange }
             />
             <img src={ require('../images/protein/chicken.png') } height="100px" width="100px" alt="chicken" />
             <label htmlFor="chicken">Chicken</label>
@@ -58,7 +59,7 @@ const ProteinForm = () => {
               value="Carnitas"
               name="protein"
               checked={ props.protein.includes('Carnitas') }
-              onChange={ props.handleChange }
+              onChange={props.handleOnChange }
             />
             <img src={ require('../images/protein/carnitas.png') } height="100px" width="100px" alt="carnitas" />
             <label htmlFor="carnitas">Carnitas</label>
@@ -73,7 +74,7 @@ const ProteinForm = () => {
               value="Sofritas"
               name="protein"
               checked={ props.protein.includes('Sofritas') }
-              onChange={ props.handleChange }
+              onChange={props.handleOnChange }
             />
             <img src={ require('../images/protein/sofritas.png') } height="100px" width="100px" alt="sofritas" />
             <label htmlFor="sofritas">Sofritas</label>
@@ -83,5 +84,6 @@ const ProteinForm = () => {
     </Fragment>
   )
 }
+
 
 export default ProteinForm
